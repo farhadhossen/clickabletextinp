@@ -1,3 +1,4 @@
+import 'package:clickabletextinp/inlinespancode.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-
+  String vlue= "好気性グラム陰性短桿菌。グラム染色上は大腸菌などの腸内細菌科と比べて小さく、グラム陰性双球菌のように見えることもある。グラム陰性球菌のMoraxella catarrhalisと似た形状であり鑑別は困難であるが、Moraxella catarrhalisは丸みを帯びた形状にあるのに対して、Acinetobacter spp.はややずんぐりした形状である。";
 
 
   @override
@@ -52,31 +53,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
 
         child: Container(
-          child:  RichText(
-            text: TextSpan(
-              style: defaultStyle,
-              children: <TextSpan>[
-                TextSpan(text: '好気性グラム陰性短桿菌。グラム染色上は大腸菌などの 腸内細菌科と比べて小さく、グラム陰性双球菌のように 見えることもある。グラム陰性球菌の'),
-                TextSpan(
-                    text: 'Moraxella catarrhalis',
-                    style: linkStyle,
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        print('Moraxella catarrhalis');
-                      }),
-                TextSpan(text: ' と似た形状であり鑑別は困難であるが、 Moraxella catarrhalisは丸みを帯びた形状にあるのに対し て、 '),
-                TextSpan(
-                    text: 'Acinetobacter app',
-                    style: linkStyle,
-                    recognizer: TapGestureRecognizer()
-                      ..onTap = () {
-                        print('Acinetobacter app"');
-                      }),
-                TextSpan(text:'はややずんぐりした形状である。'),
-              ],
-            ),
+          child: RichText(
+              text:TextSpan(
+                children:getData(vlue),
+              )
           ),
-        )
+        ),
       ),
     );
   }

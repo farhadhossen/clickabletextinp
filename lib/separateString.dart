@@ -1,4 +1,4 @@
-void separateString() {
+separateString(String string) {
 
   var string = "好気性グラム陰性短桿菌。グラム染色上は大腸菌などの腸内細菌科と比べて小さく、グラム陰性双球菌のように見えることもある。グラム陰性球菌のMoraxella catarrhalisと似た形状であり鑑別は困難であるが、Moraxella catarrhalisは丸みを帯びた形状にあるのに対して、Acinetobacter spp.はややずんぐりした形状である。";
   var re = RegExp("");
@@ -43,4 +43,6 @@ void separateString() {
 
   print(sptext);
   print("\n $lnth");
+
+  return arr;
 }
