@@ -55,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           child: RichText(
               text:TextSpan(
-                children:getData(vlue),
+                children: getData(vlue),
               )
           ),
         ),
