@@ -6,6 +6,7 @@ List<InlineSpan> getData(String value) {
   var mylist = separateString(value);
   List<InlineSpan> temp = [];
   TextStyle linkStyle = TextStyle(color: Colors.blue, fontStyle: FontStyle.italic);
+  TextStyle linkStyle2 = TextStyle(color: Colors.black);
 
   var re2 = RegExp("[a-zA-Z0-9 ]+");
 
@@ -33,7 +34,7 @@ List<InlineSpan> getData(String value) {
 
 
       temp.add(
-      TextSpan(text: ''+mylist[i].toString())
+      TextSpan(text: ''+mylist[i].toString(), style: linkStyle2,)
       );
     }
 
