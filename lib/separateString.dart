@@ -38,5 +38,6 @@ separateString(String string) {
   // }
 
 
+
   return arr;
 }
